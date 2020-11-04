@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demos/cases/clip_tabbar/clip_tabbar.dart';
 import 'package:flutter_demos/cases/custom_tabbar/custom_tabbar.dart';
+import 'package:flutter_demos/cases/text_demo/text_demo.dart';
 import 'package:flutter_demos/widgets/custom_btn.dart';
 
 void main() {
@@ -90,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return [
       CustomBtn(widget: CustomTabBar(), value: '自定义底部tab'),
       CustomBtn(widget: CliperTabbar(), value: '切割实现自定义tabbar'),
-      CustomBtn(widget: CustomTabBar(), value: '自定义底部tab'),
+      CustomBtn(widget: TextDemo(), value: '文本组件'),
       CustomBtn(widget: CustomTabBar(), value: '自定义底部tab'),
       CustomBtn(widget: CustomTabBar(), value: '自定义底部tab')
     ];
