@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+
+import 'package:logger/logger.dart';
+import 'package:logger_flutter/logger_flutter.dart';
+
 import 'package:flutter_demos/cases/clip_tabbar/clip_tabbar.dart';
 import 'package:flutter_demos/cases/custom_tabbar/custom_tabbar.dart';
 import 'package:flutter_demos/food_ordering/food_ordering.dart';
@@ -31,7 +35,10 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: '案列列表'),
+      home: LogConsoleOnShake(
+        child: MyHomePage(title: '案列列表'),
+        dark: true,
+      ),
     );
   }
 }
