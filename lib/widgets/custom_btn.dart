@@ -10,8 +10,8 @@ class CustomBtn extends StatefulWidget {
       {Key key,
       @required this.widget,
       @required this.value,
-      this.horizontal=10,
-      this.vertical=10,
+      this.horizontal = 10,
+      this.vertical = 10,
       this.textStyle})
       : super(key: key);
 
@@ -27,7 +27,7 @@ class CustomBtn extends StatefulWidget {
 
 class _CustomBtnState extends State<CustomBtn> {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {{}
     return GestureDetector(
       onTap: () {
         Navigator.push(
@@ -37,7 +37,8 @@ class _CustomBtnState extends State<CustomBtn> {
         decoration: BoxDecoration(
             color: Colors.blue,
             borderRadius: BorderRadius.all(Radius.circular(10.0))),
-        padding: EdgeInsets.symmetric(horizontal: widget.horizontal, vertical: widget.vertical),
+        padding: EdgeInsets.symmetric(
+            horizontal: widget.horizontal, vertical: widget.vertical),
         child: Text(
           widget.value,
           style: widget.textStyle ?? TextStyle(color: Colors.white),

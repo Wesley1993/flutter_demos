@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demos/cases/clip_tabbar/clip_tabbar.dart';
 import 'package:flutter_demos/cases/custom_tabbar/custom_tabbar.dart';
-import 'package:flutter_demos/cases/text_demo/text_demo.dart';
+import 'package:flutter_demos/food_ordering/food_ordering.dart';
+// import 'package:flutter_demos/cases/text_demo/text_demo.dart';
 import 'package:flutter_demos/widgets/custom_btn.dart';
 
 void main() {
@@ -54,7 +55,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -70,12 +70,12 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         color: Colors.greenAccent,
         width: MediaQuery.of(context).size.width,
         child: Wrap(
           direction: Axis.horizontal,
-          alignment: WrapAlignment.spaceEvenly,
+          alignment: WrapAlignment.spaceBetween,
           crossAxisAlignment: WrapCrossAlignment.start,
           runAlignment: WrapAlignment.spaceBetween,
           spacing: 5,
@@ -87,13 +87,14 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  List<Widget> _cases(){
+  List<Widget> _cases() {
     return [
       CustomBtn(widget: CustomTabBar(), value: '自定义底部tab'),
       CustomBtn(widget: CliperTabbar(), value: '切割实现自定义tabbar'),
-      CustomBtn(widget: TextDemo(), value: '文本组件'),
+      // CustomBtn(widget: TextDemo(), value: '文本组件'),
       CustomBtn(widget: CustomTabBar(), value: '自定义底部tab'),
-      CustomBtn(widget: CustomTabBar(), value: '自定义底部tab')
+      CustomBtn(widget: CustomTabBar(), value: '自定义底部tab'),
+      CustomBtn(widget: FoodOrdering(), value: 'flutter food order')
     ];
   }
 }
