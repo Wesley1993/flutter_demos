@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demos/login/login_page.dart';
 
 import 'package:logger/logger.dart';
 import 'package:logger_flutter/logger_flutter.dart';
@@ -101,7 +102,8 @@ class _MyHomePageState extends State<MyHomePage> {
       // CustomBtn(widget: TextDemo(), value: '文本组件'),
       CustomBtn(widget: CustomTabBar(), value: '自定义底部tab'),
       CustomBtn(widget: CustomTabBar(), value: '自定义底部tab'),
-      CustomBtn(widget: FoodOrdering(), value: 'flutter food order')
+      CustomBtn(widget: FoodOrdering(), value: 'flutter food order'),
+      CustomBtn(widget: LoginPage(), value: '登录页')
     ];
   }
 }
